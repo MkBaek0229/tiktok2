@@ -104,7 +104,7 @@ const StyledRadio = styled.input`
 `;
 const StyledLabel = styled.div`
   height: 24px;
-  width: 79px;
+  width: 90px;
   margin-top: 2px;
 
   @media (max-width: 768px) {
