@@ -70,13 +70,10 @@ function MainSend() {
     if (file) formData.append("file", file);
 
     try {
-      const response = await fetch(
-        "https://makterbackend.fly.dev/api/questions",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch("https://tiktokbac.fly.dev/api/questions", {
+        method: "POST",
+        body: formData,
+      });
 
       const result = await response.json();
       if (result.resultCode === "S-1") {
@@ -91,26 +88,31 @@ function MainSend() {
   };
 
   return (
-    <PageContainer>
-      <QuestionSend
-        inquirerName={inquirerName}
-        onInquirerNameChange={handleInquirerNameChange}
-      />
-      <QuestionSend2
-        phoneNumber={phoneNumber}
-        onPhoneChange={handlePhoneNumberChange}
-      />
-      <QuestionSend3 email={email} onEmailChange={handleEmailChange} />
-      <QuestionSend4 title={title} onTitleChange={handleTitleChange} />
-      <QuestionSend5 content={content} onContentChange={handleContentChange} />
-      <QuestionSend6 onFileChange={handleFileChange} />
-      <QuestionSend7
-        agreed={agreed}
-        onAgreementChange={handleAgreementChange}
-        onSubmit={submitQuestion}
-      />
-      <LastPage />
-    </PageContainer>
+    <div>
+      <PageContainer>
+        <QuestionSend
+          inquirerName={inquirerName}
+          onInquirerNameChange={handleInquirerNameChange}
+        />
+        <QuestionSend2
+          phoneNumber={phoneNumber}
+          onPhoneChange={handlePhoneNumberChange}
+        />
+        <QuestionSend3 email={email} onEmailChange={handleEmailChange} />
+        <QuestionSend4 title={title} onTitleChange={handleTitleChange} />
+        <QuestionSend5
+          content={content}
+          onContentChange={handleContentChange}
+        />
+        <QuestionSend6 onFileChange={handleFileChange} />
+        <QuestionSend7
+          agreed={agreed}
+          onAgreementChange={handleAgreementChange}
+          onSubmit={submitQuestion}
+        />
+        <LastPage />
+      </PageContainer>
+    </div>
   );
 }
 

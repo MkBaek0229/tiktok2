@@ -53,7 +53,7 @@ const Container = styled.div`
   flex-direction: column; /* 세로 정렬 */
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 102px;
 
   /* 반응형 레이아웃 변경 */
   @media (max-width: 768px) {

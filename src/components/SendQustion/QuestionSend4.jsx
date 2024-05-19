@@ -5,21 +5,23 @@ import star from "../../../images/Question/star.png";
 function QuestionSend4({ title, onTitleChange }) {
   return (
     <MainContainer>
-      <StyledLabel>
-        <div className="row-wrapper">
-          <div className="text-wrapper2">
-            제목
-            <img className="star-icon" src={star} alt="Star" />
+      <QuestionBox>
+        <StyledLabel>
+          <div className="row-wrapper">
+            <div className="text-wrapper2">
+              제목
+              <img className="star-icon" src={star} alt="Star" />
+            </div>
           </div>
-        </div>
-      </StyledLabel>
-      <StyledInput
-        className="rectangle"
-        type="text"
-        value={title}
-        placeholder="제목을 입력하세요"
-        onChange={onTitleChange}
-      />
+        </StyledLabel>
+        <StyledInput
+          className="rectangle"
+          type="text"
+          value={title}
+          placeholder="제목을 입력하세요"
+          onChange={onTitleChange}
+        />
+      </QuestionBox>
     </MainContainer>
   );
 }
@@ -38,53 +40,69 @@ const MainContainer = styled.div`
   }
 `;
 
+const QuestionBox = styled.div`
+  width: 761px;
+
+  @media (max-width: 426px) {
+    width: 365px;
+  }
+`;
+
 const StyledLabel = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   height: auto;
   width: 100%;
-  max-width: 800px;
-  margin-left: 120px;
+
   .row-wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 28px;
 
-    margin-top: 30px;
+    margin-top: 48px;
 
-    @media (max-width: 768px) {
-      margin-left: -10%;
+    @media (max-width: 425px) {
+      margin-top: 44px;
     }
   }
 
   .text-wrapper2 {
+    width: 120px;
+    height: 28px;
+
     display: flex;
     align-items: center;
     position: relative;
+    align-items: flex-start;
     color: #ffffff;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 700;
     margin-top: 10px;
 
-    .star-icon {
-      width: 12px;
-      height: 12px;
-      margin-bottom: 5px;
-      margin-left: 5px;
+    @media (max-width: 768px) {
+      font-size: 30px;
+      margin-left: -0px;
+    }
 
+    .star-icon {
+      width: 10px;
+      height: 10px;
+      margin-left: 5px;
       @media (max-width: 768px) {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
       }
     }
   }
 
   .text-wrapper2 {
-    font-size: 20px;
+    font-size: 23px;
 
     @media (max-width: 768px) {
       font-size: 18px;
+      margin-left: -0;
     }
   }
 `;
@@ -92,7 +110,7 @@ const StyledLabel = styled.div`
 const StyledInput = styled.input`
   height: 74px;
   width: 720px;
-  max-width: 100%;
+
   border: 2px solid #ffffff80;
   border-radius: 10px;
   background-color: transparent;
@@ -100,16 +118,15 @@ const StyledInput = styled.input`
 
   font-size: 16px;
   outline: none;
-  margin-left: 50px;
-  margin-top: 10px;
-  padding-left: 10px;
+
+  margin-top: 36px;
+
   ::placeholder {
     color: #ffffff80;
   }
 
-  @media (max-width: 768px) {
-    width: 90%;
-    height: 60px;
-    margin-left: 3%;
+  @media (max-width: 425px) {
+    width: 365px;
+    height: 45px;
   }
 `;

@@ -24,102 +24,104 @@ function QuestionSend7({ agreed, onAgreementChange, onSubmit }) {
 
   return (
     <MainContainer>
-      <StyledLabel>
-        <div className="row-wrapper">
-          <div className="text-wrapper2">
-            개인정보 처리방침
-            <img className="star-icon" src={star} alt="Star" />
+      <QuestionBox>
+        <StyledLabel>
+          <div className="row-wrapper">
+            <div className="text-wrapper2">
+              개인정보 처리방침
+              <img className="star-icon" src={star} alt="Star" />
+            </div>
           </div>
-        </div>
-      </StyledLabel>
-      <StyledContent>
-        <p>개인정보 수집·이용 동의서</p>
-        <p>가. 개인정보의 수집·이용에 관한 사항</p>
-        <ul>
-          <li>❏ 개인정보의 수집·이용 목적</li>
+        </StyledLabel>
+        <StyledContent>
+          <p>개인정보 수집·이용 동의서</p>
+          <p>가. 개인정보의 수집·이용에 관한 사항</p>
           <ul>
-            <li>○ 본 행사 운영에 따른 공지 및 자료조사</li>
+            <li>❏ 개인정보의 수집·이용 목적</li>
+            <ul>
+              <li>○ 본 행사 운영에 따른 공지 및 자료조사</li>
+            </ul>
+            <li>❏ 수집·이용할 개인정보의 항목</li>
+            <ul>
+              <li>
+                ○ 연락처, 주소, 생년월일, 성별, 이메일, 소속 등 참가신청 및 행사
+                운영 중 취득한 정보
+              </li>
+            </ul>
+            <li>❏ 개인정보의 보유·이용기간</li>
+            <ul>
+              <li>
+                ○ 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면
+                지체 없이 파기합니다. 단, 본 행사 종료 후 참여 인정문서 발급 및
+                차년도 행사 준비를 위한 역대 수상자 정보공유 등을 위한 최소한의
+                자료(소속, 성명, 연락처, 이메일)는 보존됩니다. (보존기간: 행사
+                종료 후 3년)
+              </li>
+            </ul>
+            <li>❏ 동의를 거부할 권리 및 동의를 거부할 경우의 불이익</li>
+            <ul>
+              <li>
+                ○ 위 개인정보의 수집·이용에 거부할 권리가 있음을 알려드립니다.
+                단, 수집항목은 행사 진행을 위한 최소한의 필수정보로서 개인정보
+                수집·이용에 동의하지 않으실 경우 행사 참가 및 제반활동이
+                불가능합니다.
+              </li>
+            </ul>
           </ul>
-          <li>❏ 수집·이용할 개인정보의 항목</li>
+          <p>나. 개인정보 제3자 제공에 관한 사항</p>
           <ul>
-            <li>
-              ○ 연락처, 주소, 생년월일, 성별, 이메일, 소속 등 참가신청 및 행사
-              운영 중 취득한 정보
-            </li>
+            <li>❏ 제공받는 자</li>
+            <ul>
+              <li>○ (사)한국디지털콘텐츠학회, TikTok</li>
+            </ul>
+            <li>❏ 제공받는 자의 목적</li>
+            <ul>
+              <li>
+                ○ 2024 TikTok 대학생 AR필터 메이커톤 행사 진행 및 운영, 참가자
+                관리
+              </li>
+            </ul>
+            <li>❏ 제공하는 개인정보 항목</li>
+            <ul>
+              <li>
+                ○ 연락처, 주소, 생년월일, 성별, 이메일, 소속 등 참가신청 및 행사
+                운영 중 취득한 정보
+              </li>
+            </ul>
+            <li>❏ 동의를 거부할 권리 및 동의를 거부할 경우의 불이익</li>
+            <ul>
+              <li>
+                ○ 위 제3자에 대한 개인정보의 제공에 관한 동의를 거부할 수 있으나
+                본 행사 참가를 위해 필수적이므로, 위 사항에 동의하셔야만 참가 및
+                활동이 가능합니다.
+              </li>
+            </ul>
           </ul>
-          <li>❏ 개인정보의 보유·이용기간</li>
-          <ul>
-            <li>
-              ○ 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면
-              지체 없이 파기합니다. 단, 본 행사 종료 후 참여 인정문서 발급 및
-              차년도 행사 준비를 위한 역대 수상자 정보공유 등을 위한 최소한의
-              자료(소속, 성명, 연락처, 이메일)는 보존됩니다. (보존기간: 행사
-              종료 후 3년)
-            </li>
-          </ul>
-          <li>❏ 동의를 거부할 권리 및 동의를 거부할 경우의 불이익</li>
-          <ul>
-            <li>
-              ○ 위 개인정보의 수집·이용에 거부할 권리가 있음을 알려드립니다. 단,
-              수집항목은 행사 진행을 위한 최소한의 필수정보로서 개인정보
-              수집·이용에 동의하지 않으실 경우 행사 참가 및 제반활동이
-              불가능합니다.
-            </li>
-          </ul>
-        </ul>
-        <p>나. 개인정보 제3자 제공에 관한 사항</p>
-        <ul>
-          <li>❏ 제공받는 자</li>
-          <ul>
-            <li>○ (사)한국디지털콘텐츠학회, TikTok</li>
-          </ul>
-          <li>❏ 제공받는 자의 목적</li>
-          <ul>
-            <li>
-              ○ 2024 TikTok 대학생 AR필터 메이커톤 행사 진행 및 운영, 참가자
-              관리
-            </li>
-          </ul>
-          <li>❏ 제공하는 개인정보 항목</li>
-          <ul>
-            <li>
-              ○ 연락처, 주소, 생년월일, 성별, 이메일, 소속 등 참가신청 및 행사
-              운영 중 취득한 정보
-            </li>
-          </ul>
-          <li>❏ 동의를 거부할 권리 및 동의를 거부할 경우의 불이익</li>
-          <ul>
-            <li>
-              ○ 위 제3자에 대한 개인정보의 제공에 관한 동의를 거부할 수 있으나
-              본 행사 참가를 위해 필수적이므로, 위 사항에 동의하셔야만 참가 및
-              활동이 가능합니다.
-            </li>
-          </ul>
-        </ul>
-        <p>
-          본인은 본 동의서의 개인정보 수집·이용·제공에 관한 권리 및 내용을
-          이해했으며, 위와 같은 목적으로 본인의 개인정보를 수집·이용 및
-          제3자에게 제공하는 것에 동의합니다.
-        </p>
-      </StyledContent>
-      <CheckboxContainer>
-        <input
-          type="checkbox"
-          id="agreement"
-          checked={agreed}
-          onChange={handleCheckboxChange}
-        />
-        <label htmlFor="agreement">개인정보 처리방침에 동의합니다</label>
-      </CheckboxContainer>
-      {showWarning && (
-        <WarningMessage>개인정보 처리방침에 동의해 주세요.</WarningMessage>
-      )}
-      <StyleBox2_2 />
-      <StyledBox2>
-        <div className="rectangle" onClick={handleSubmitClick}>
-          <StyledLabel2 disabled={!agreed}>제출하기</StyledLabel2>
-        </div>
-      </StyledBox2>
+          <p>
+            본인은 본 동의서의 개인정보 수집·이용·제공에 관한 권리 및 내용을
+            이해했으며, 위와 같은 목적으로 본인의 개인정보를 수집·이용 및
+            제3자에게 제공하는 것에 동의합니다.
+          </p>
+        </StyledContent>
+        <CheckboxContainer>
+          <input
+            type="checkbox"
+            id="agreement"
+            checked={agreed}
+            onChange={handleCheckboxChange}
+          />
+          <label htmlFor="agreement">개인정보 처리방침에 동의합니다</label>
+        </CheckboxContainer>
+        {showWarning && (
+          <WarningMessage>개인정보 처리방침에 동의해 주세요.</WarningMessage>
+        )}
+        <StyleBox2_2 />
+        <StyledBox2>
+          <div className="rectangle" onClick={handleSubmitClick}>
+            <StyledLabel2 disabled={!agreed}>제출하기</StyledLabel2>
+          </div>
+        </StyledBox2>
+      </QuestionBox>
     </MainContainer>
   );
 }
@@ -139,58 +141,75 @@ const MainContainer = styled.div`
   }
 `;
 
+const QuestionBox = styled.div`
+  width: 761px;
+
+  @media (max-width: 426px) {
+    width: 365px;
+  }
+`;
 const StyledLabel = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: auto;
   width: 100%;
-  max-width: 800px;
-  margin-left: 130px;
-  @media (max-width: 768px) {
-    font-size: 18px;
-    margin-right: 130px;
-  }
+
   .row-wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 30px;
+    height: 28px;
 
-    @media (max-width: 768px) {
-      margin-left: 10px;
+    margin-top: 48px;
+
+    @media (max-width: 425px) {
+      margin-top: 44px;
     }
   }
 
   .text-wrapper2 {
+    width: 181px;
+    height: 28px;
+
     display: flex;
     align-items: center;
     position: relative;
+    align-items: flex-start;
     color: #ffffff;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 700;
-    font-size: 20px;
+    margin-top: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+      margin-left: -0px;
+    }
 
     .star-icon {
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       margin-left: 5px;
-
       @media (max-width: 768px) {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
       }
     }
+  }
+
+  .text-wrapper2 {
+    font-size: 23px;
 
     @media (max-width: 768px) {
       font-size: 18px;
-      margin-left: 0;
+      margin-left: -0;
     }
   }
 `;
 
 const StyledContent = styled.div`
-  width: 100%;
-  max-width: 730px;
+  width: 718px;
+
   height: 400px;
   border: 2px solid #ffffff80;
   border-radius: 10px;
@@ -198,10 +217,9 @@ const StyledContent = styled.div`
   color: white;
   font-size: 14px;
   outline: none;
-  margin-top: 10px;
+  margin-top: 36px;
   overflow-y: scroll;
   padding: 10px;
-  margin-left: 50px;
 
   & p {
     margin: 0;
@@ -242,7 +260,6 @@ const CheckboxContainer = styled.div`
   width: 100%;
   max-width: 800px;
   color: white;
-  margin-left: 90px;
 
   & input[type="checkbox"] {
     appearance: none;
@@ -316,7 +333,7 @@ const StyledBox2 = styled.div`
       rgb(37, 244, 238) 0%,
       rgb(254, 44, 85) 100%
     );
-    border-radius: 20px;
+    border-radius: 10px;
     height: 72px;
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -329,6 +346,11 @@ const StyledBox2 = styled.div`
     &:hover {
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
       transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      width: 260px;
+      height: 65px;
     }
   }
 

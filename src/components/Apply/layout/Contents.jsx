@@ -13,7 +13,7 @@ export const RadioContext = createContext({});
 
 function Contents() {
   const [selectedButton, setSelectedButton] = useState("");
-  const [selectedRadio, setSelectedRadio] = useState("Team");
+  const [selectedRadio, setSelectedRadio] = useState("");
 
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
@@ -283,7 +283,7 @@ const SubLabel = styled.div`
   .text-wrapper {
     color: #ffffff;
     font-family: "Inter-SemiBold", Helvetica;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 600;
 
     /* Extra small devices (폰, 576px 미만) */
@@ -293,22 +293,24 @@ const SubLabel = styled.div`
 
     /* Small devices (폰, 576px 이상 768px 미만) */
     @media (min-width: 576px) and (max-width: 767.98px) {
-      font-size: 15px; /* 작은 디바이스에서 적당하게 설정 */
+      font-size: calc(
+        10.35px + (13.8 - 10.35) * ((100vw - 576px) / (768 - 576))
+      );
     }
 
     /* Medium devices (태블릿, 768px 이상 992px 미만) */
     @media (min-width: 768px) and (max-width: 991.98px) {
-      font-size: 23px; /* 태블릿 크기에서 기본 크기와 동일하게 설정 */
+      font-size: calc(13.8px + (17.8 - 13.8) * ((100vw - 768px) / (991 - 768)));
     }
 
     /* Large devices (데스크톱, 992px 이상 1280px 미만) */
     @media (min-width: 992px) and (max-width: 1279.98px) {
-      font-size: 25px; /* 데스크톱 크기에서 약간 더 크게 설정 */
+      font-size: calc(17.8px + (23 - 17.8) * ((100vw - 992px) / (1279 - 992)));
     }
 
     /* Extra large devices (1280px 이상) */
     @media (min-width: 1280px) {
-      font-size: 28px; /* 큰 데스크톱 크기에서 더 크게 설정 */
+      font-size: 23px; /* 큰 데스크톱 크기에서 더 크게 설정 */
     }
   }
 `;

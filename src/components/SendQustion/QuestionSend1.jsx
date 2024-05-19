@@ -15,34 +15,36 @@ const slideIn = keyframes`
 function QuestionSend({ inquirerName, onInquirerNameChange }) {
   return (
     <MainContainer>
-      <StyledLabel>
-        <div className="label-container">
-          <div className="text-wrapper">문의하기</div>
-        </div>
-        <StyledLine>
-          <img className="vector" src={line} alt="Line" />
-        </StyledLine>
-      </StyledLabel>
-      <StyledLabel>
-        <div className="row-wrapper">
-          <div className="text-wrapper2">
-            문의자 명
-            <img className="star-icon" src={star} alt="Star" />
+      <QuestionBox>
+        <StyledLabel>
+          <div className="label-container">
+            <div className="text-wrapper">문의하기</div>
           </div>
-          <div className="text-wrapper3">
-            <img className="star-icon2" src={star} alt="Star" />
-            필수 입력
+          <StyledLine>
+            <img className="vector" src={line} alt="Line" />
+          </StyledLine>
+        </StyledLabel>
+        <StyledLabel>
+          <div className="row-wrapper">
+            <div className="text-wrapper2">
+              문의자 명
+              <img className="star-icon" src={star} alt="Star" />
+            </div>
+            <div className="text-wrapper3">
+              <img className="star-icon2" src={star} alt="Star" />
+              필수 입력
+            </div>
           </div>
-        </div>
-      </StyledLabel>
+        </StyledLabel>
 
-      <StyledInput
-        id="inquirerName"
-        type="text"
-        placeholder="문의자 명을 입력하세요"
-        value={inquirerName}
-        onChange={onInquirerNameChange}
-      />
+        <StyledInput
+          id="inquirerName"
+          type="text"
+          placeholder="문의자 명을 입력하세요"
+          value={inquirerName}
+          onChange={onInquirerNameChange}
+        />
+      </QuestionBox>
     </MainContainer>
   );
 }
@@ -55,11 +57,17 @@ const MainContainer = styled.div`
   align-items: center;
 
   margin-top: 150px;
-  overflow: hidden;
 
   @media (max-width: 768px) {
     height: auto;
-    margin-left: 3%;
+  }
+`;
+
+const QuestionBox = styled.div`
+  max-width: 761px;
+
+  @media (max-width: 426px) {
+    max-width: 365px;
   }
 `;
 
@@ -68,31 +76,30 @@ const StyledLabel = styled.div`
   flex-direction: column;
   align-items: flex-start;
   height: auto;
-  width: 100%;
-  max-width: 800px;
+  width: 95%;
 
   .label-container {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 282px;
+    height: 73px;
 
-    @media (max-width: 768px) {
-      align-items: flex-start;
-      margin-left: 10px;
+    @media (max-width: 425px) {
+      height: 54px;
     }
   }
 
   .text-wrapper {
     color: #ffffff;
     font-family: "Inter-SemiBold", Helvetica;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 700;
-    margin-top: 20px;
-    margin-left: 70px;
+    width: 100%;
+    height: 100%;
 
-    @media (max-width: 768px) {
-      font-size: 30px;
-      margin-left: -0px;
+    @media (max-width: 425px) {
+      font-size: 45px;
     }
   }
 
@@ -100,37 +107,39 @@ const StyledLabel = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 32px;
 
-    margin-top: 30px;
+    margin-top: 69px;
+
+    @media (max-width: 425px) {
+      margin-top: 72px;
+    }
   }
 
   .text-wrapper2,
   .text-wrapper3 {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     color: #ffffff;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 700;
-    margin-top: 10px;
-    margin-left: 70px;
+
+    @media (max-width: 425px) {
+      align-items: center;
+    }
+
     .star-icon {
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       margin-bottom: 5px;
       margin-left: 5px;
-
-      @media (max-width: 768px) {
-        width: 10px;
-        height: 10px;
-        margin-left: 0px;
-      }
     }
 
     .star-icon2 {
-      width: 12px;
-      height: 12px;
-      margin-bottom: 5px;
+      width: 10px;
+      height: 10px;
+      padding-bottom: 10px;
 
       @media (max-width: 768px) {
         width: 10px;
@@ -140,20 +149,23 @@ const StyledLabel = styled.div`
   }
 
   .text-wrapper2 {
-    font-size: 20px;
+    width: 120px;
+    height: 28px;
 
-    @media (max-width: 768px) {
-      font-size: 18px;
-      margin-left: 1%;
+    font-size: 23px;
+
+    @media (max-width: 425px) {
+      font-size: 19px;
     }
   }
 
   .text-wrapper3 {
-    font-size: 15px;
+    width: 76px;
+    height: 23px;
+    font-size: 16px;
 
-    @media (max-width: 768px) {
-      font-size: 15px;
-      margin-right: 2%;
+    @media (max-width: 425px) {
+      display: none;
     }
   }
 
@@ -163,45 +175,44 @@ const StyledLabel = styled.div`
 `;
 
 const StyledLine = styled.div`
-  width: 90%;
-  max-width: 800px;
-  margin-top: 10px;
-  margin-left: 60px;
+  width: 760px;
+
   animation: ${slideIn} 0.5s ease-out;
 
   .vector {
     width: 100%;
     height: 2px;
   }
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 60px;
-    margin-left: 0px;
+
+  @media (max-width: 425px) {
+    width: 375px;
   }
 `;
 
 const StyledInput = styled.input`
-  width: 720px;
+  width: 718px;
   height: 74px;
-  margin-left: 50px;
-  max-width: 800px;
   border: 2px solid #ffffff80;
   border-radius: 10px;
   background-color: transparent;
   color: white;
-
-  font-size: 16px;
+  font-size: 20px;
   outline: none;
-  padding-left: 10px;
-  margin-top: 10px;
+  margin-top: 21px;
 
-  ::placeholder {
+  &::placeholder {
     color: #ffffff80;
+    font-size: 20px; /* 적절한 크기로 조정 */
+    padding-left: 11px;
+
+    @media (max-width: 425px) {
+      font-size: 15px;
+      padding-left: 5px;
+    }
   }
 
-  @media (max-width: 768px) {
-    width: 93%;
-    height: 60px;
-    margin-left: -1%;
+  @media (max-width: 425px) {
+    width: 365px;
+    height: 45px;
   }
 `;

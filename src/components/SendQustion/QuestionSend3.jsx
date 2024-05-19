@@ -40,55 +40,57 @@ function QuestionSend3({ onEmailChange }) {
 
   return (
     <MainContainer>
-      <StyledLabel>
-        <div className="row-wrapper">
-          <div className="text-wrapper2">
-            이메일
-            <img className="star-icon" src={star} alt="Star" />
+      <QuestionBox>
+        <StyledLabel>
+          <div className="row-wrapper">
+            <div className="text-wrapper2">
+              메일 주소
+              <img className="star-icon" src={star} alt="Star" />
+            </div>
           </div>
-        </div>
-      </StyledLabel>
-      <InputContainer>
-        <InputBox>
-          <input
+        </StyledLabel>
+        <InputContainer>
+          <InputBox>
+            <input
+              className="rectangle"
+              type="text"
+              placeholder="example"
+              onChange={handleLocalChange}
+            />
+          </InputBox>
+          <InputDivider>@</InputDivider>
+          <InputBox>
+            {selectedDomain || customDomain ? (
+              <input
+                className="rectangle"
+                type="text"
+                placeholder="domain.com"
+                value={selectedDomain || customDomain}
+                onChange={handleCustomDomainChange}
+                disabled={!!selectedDomain}
+              />
+            ) : (
+              <input
+                className="rectangle"
+                type="text"
+                placeholder="domain.com"
+                onChange={handleCustomDomainChange}
+              />
+            )}
+          </InputBox>
+          <DomainSelector
             className="rectangle"
-            type="text"
-            placeholder="example"
-            onChange={handleLocalChange}
-          />
-        </InputBox>
-        <InputDivider>@</InputDivider>
-        <InputBox>
-          {selectedDomain || customDomain ? (
-            <input
-              className="rectangle"
-              type="text"
-              placeholder="domain.com"
-              value={selectedDomain || customDomain}
-              onChange={handleCustomDomainChange}
-              disabled={!!selectedDomain}
-            />
-          ) : (
-            <input
-              className="rectangle"
-              type="text"
-              placeholder="domain.com"
-              onChange={handleCustomDomainChange}
-            />
-          )}
-        </InputBox>
-        <DomainSelector
-          className="rectangle"
-          value={selectedDomain || "직접 입력"}
-          onChange={handleDomainChange}
-        >
-          {emailDomains.map((domain, index) => (
-            <option key={index} value={domain}>
-              {domain}
-            </option>
-          ))}
-        </DomainSelector>
-      </InputContainer>
+            value={selectedDomain || "직접 입력"}
+            onChange={handleDomainChange}
+          >
+            {emailDomains.map((domain, index) => (
+              <option key={index} value={domain}>
+                {domain}
+              </option>
+            ))}
+          </DomainSelector>
+        </InputContainer>
+      </QuestionBox>
     </MainContainer>
   );
 }
@@ -100,11 +102,13 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  overflow: hidden;
+`;
 
-  @media (max-width: 768px) {
-    height: auto;
-    margin-left: 2%;
+const QuestionBox = styled.div`
+  width: 761px;
+
+  @media (max-width: 426px) {
+    width: 365px;
   }
 `;
 
@@ -113,47 +117,56 @@ const StyledLabel = styled.div`
   flex-direction: column;
   align-items: flex-start;
   height: auto;
-
   width: 100%;
-  margin-left: 120px;
-  max-width: 800px;
+
   .row-wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 28px;
 
-    @media (max-width: 768px) {
-      margin-left: -55px;
+    margin-top: 48px;
+
+    @media (max-width: 425px) {
+      margin-top: 44px;
     }
   }
 
   .text-wrapper2 {
+    width: 120px;
+    height: 28px;
+
     display: flex;
     align-items: center;
     position: relative;
+    align-items: flex-start;
     color: #ffffff;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+      margin-left: -0px;
+    }
 
     .star-icon {
-      width: 12px;
-      height: 12px;
-      margin-bottom: 5px;
+      width: 10px;
+      height: 10px;
       margin-left: 5px;
-
       @media (max-width: 768px) {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
       }
     }
   }
 
   .text-wrapper2 {
-    font-size: 20px;
+    font-size: 23px;
 
     @media (max-width: 768px) {
       font-size: 18px;
+      margin-left: -0;
     }
   }
 `;
@@ -180,9 +193,9 @@ const InputBox = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 425px) {
     width: 90%;
-    height: 60px;
+    height: 51px;
     margin-bottom: 10px;
   }
 `;
@@ -192,21 +205,23 @@ const InputContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  margin-left: 50px;
-  width: 730px;
 
-  @media (max-width: 768px) {
-    width: 99%;
-    height: 60px;
-    margin-left: 1%;
+  margin-top: 36px;
+
+  max-width: 726px;
+
+  @media (max-width: 425px) {
+    width: 364px;
+    height: 45px;
   }
 `;
 
 const InputDivider = styled.span`
-  color: white;
-  font-size: 24px;
+  color: #ffffff80;
+  font-size: 25px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  width: 25px;
 
   @media (max-width: 768px) {
     font-size: 20px;
@@ -230,10 +245,10 @@ const DomainSelector = styled.select`
     color: white;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 425px) {
     width: 80%;
-    height: 60px;
-    margin-right: 1%;
+    height: 51px;
+    margin-left: 8px;
     margin-top: -10px;
   }
 `;
