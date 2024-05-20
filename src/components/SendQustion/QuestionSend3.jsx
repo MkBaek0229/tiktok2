@@ -107,6 +107,10 @@ const MainContainer = styled.div`
 const QuestionBox = styled.div`
   width: 761px;
 
+  @media (max-width: 768px) {
+    width: 600px;
+  }
+
   @media (max-width: 426px) {
     max-width: 387px;
   }
@@ -128,8 +132,11 @@ const StyledLabel = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 28px;
-
     margin-top: 48px;
+
+    @media (max-width: 768px) {
+      margin-top: 44px;
+    }
 
     @media (max-width: 425px) {
       margin-top: 44px;
@@ -139,7 +146,6 @@ const StyledLabel = styled.div`
   .text-wrapper2 {
     width: 120px;
     height: 28px;
-
     display: flex;
     align-items: center;
     position: relative;
@@ -148,10 +154,14 @@ const StyledLabel = styled.div`
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 700;
     margin-top: 10px;
+    font-size: 23px;
 
     @media (max-width: 768px) {
-      font-size: 30px;
-      margin-left: -0px;
+      font-size: 20px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 19px;
     }
 
     .star-icon {
@@ -159,18 +169,11 @@ const StyledLabel = styled.div`
       height: 10px;
       margin-left: 5px;
       margin-bottom: 5px;
+
       @media (max-width: 768px) {
         width: 9px;
         height: 9px;
       }
-    }
-  }
-
-  .text-wrapper2 {
-    font-size: 23px;
-
-    @media (max-width: 425px) {
-      font-size: 19px;
     }
   }
 `;
@@ -178,13 +181,25 @@ const StyledLabel = styled.div`
 const StyledInput = styled.input`
   &::placeholder {
     color: #ffffff80;
-    font-size: 20px; /* 적절한 크기로 조정 */
+    font-size: 20px;
     padding-left: 11px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
 
     @media (max-width: 425px) {
       font-size: 15px;
       padding-left: 5px;
     }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 15px;
   }
 `;
 
@@ -199,14 +214,17 @@ const InputBox = styled.div`
     width: 100%;
     background-color: transparent;
     color: white;
-
-    font-size: 16px;
+    font-size: 20px;
     outline: none;
     box-sizing: border-box;
 
     ::placeholder {
       color: #ffffff80;
     }
+  }
+
+  @media (max-width: 768px) {
+    height: 60px;
   }
 
   @media (max-width: 425px) {
@@ -221,15 +239,19 @@ const InputContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   margin-top: 36px;
-
   max-width: 726px;
+
+  @media (max-width: 768px) {
+    max-width: 600px;
+  }
 
   @media (max-width: 425px) {
     width: 373px;
     height: 45px;
+    gap: 8px;
   }
+
   @media (max-width: 375px) {
     width: 322px;
     height: 39px;
@@ -243,6 +265,10 @@ const InputDivider = styled.span`
   font-weight: 600;
   width: 25px;
 
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+
   @media (max-width: 425px) {
     font-size: 15px;
   }
@@ -255,7 +281,6 @@ const DomainSelector = styled.select`
   border-radius: 10px;
   background-color: transparent;
   color: white;
-
   font-size: 16px;
   outline: none;
   box-sizing: border-box;
@@ -263,6 +288,10 @@ const DomainSelector = styled.select`
   option {
     background-color: #1f1f1f;
     color: white;
+  }
+
+  @media (max-width: 768px) {
+    height: 60px;
   }
 
   @media (max-width: 425px) {

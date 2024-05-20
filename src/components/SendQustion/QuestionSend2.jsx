@@ -76,6 +76,10 @@ const MainContainer = styled.div`
 const QuestionBox = styled.div`
   width: 761px;
 
+  @media (max-width: 768px) {
+    width: 600px;
+  }
+
   @media (max-width: 426px) {
     max-width: 387px;
   }
@@ -97,8 +101,11 @@ const StyledLabel = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 28px;
-
     margin-top: 48px;
+
+    @media (max-width: 768px) {
+      margin-top: 44px;
+    }
 
     @media (max-width: 425px) {
       margin-top: 44px;
@@ -108,7 +115,6 @@ const StyledLabel = styled.div`
   .text-wrapper2 {
     width: 120px;
     height: 28px;
-
     display: flex;
     align-items: center;
     position: relative;
@@ -117,60 +123,91 @@ const StyledLabel = styled.div`
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 700;
     margin-top: 10px;
+    font-size: 23px;
 
     @media (max-width: 768px) {
-      font-size: 30px;
-      margin-left: -0px;
+      font-size: 20px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 19px;
     }
 
     .star-icon {
       width: 10px;
       height: 10px;
       margin-left: 5px;
+
       @media (max-width: 768px) {
         width: 9px;
         height: 9px;
       }
     }
   }
-
-  .text-wrapper2 {
-    font-size: 23px;
-
-    @media (max-width: 425px) {
-      font-size: 19px;
-    }
-  }
 `;
 
 const StyledInput = styled.input`
+  width: 225px;
+  height: 74px;
+  border: 2px solid #ffffff80;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  outline: none;
+  padding-left: 11px;
+
   &::placeholder {
     color: #ffffff80;
-    font-size: 20px; /* 적절한 크기로 조정 */
-    padding-left: 11px;
+    font-size: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
 
     @media (max-width: 425px) {
       font-size: 15px;
-      padding-left: 5px;
     }
   }
 
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+  }
+
   @media (max-width: 425px) {
-    width: 365px;
+    width: 100px;
     height: 45px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 375px) {
+    width: 90px;
+    height: 41px;
+    font-size: 14px;
   }
 `;
+
 const InputBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 74px;
   width: 225px;
 
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 60px;
+  }
+
   @media (max-width: 425px) {
-    width: 109px;
+    width: 100px;
     height: 45px;
   }
 
   @media (max-width: 375px) {
-    width: 100px;
+    width: 90px;
     height: 41px;
   }
 
@@ -179,14 +216,12 @@ const InputBox = styled.div`
     border-radius: 10px;
     height: 100%;
     width: 100%;
-
     background-color: transparent;
     color: white;
-
-    font-size: 16px;
+    font-size: 20px;
     outline: none;
 
-    ::placeholder {
+    &::placeholder {
       color: #ffffff80;
     }
   }
@@ -197,22 +232,21 @@ const InputContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 15px;
-
   margin-top: 36px;
-
   max-width: 718px;
+
+  @media (max-width: 768px) {
+    max-width: 600px;
+  }
 
   @media (max-width: 425px) {
     width: 373px;
-    height: 45px;
-    gap: 20px;
-  }
-  @media (max-width: 375px) {
-    width: 322px;
-    height: 39px;
-    gap: 25px;
+    gap: 10px;
   }
 
+  @media (max-width: 375px) {
+    width: 322px;
+    gap: 8px;
   }
 `;
 
@@ -221,6 +255,10 @@ const InputDivider = styled.span`
   font-size: 24px;
   position: relative;
   left: 2px;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 
   @media (max-width: 425px) {
     display: none;

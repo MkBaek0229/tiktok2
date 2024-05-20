@@ -144,6 +144,10 @@ const MainContainer = styled.div`
 const QuestionBox = styled.div`
   width: 761px;
 
+  @media (max-width: 768px) {
+    max-width: 600px;
+  }
+
   @media (max-width: 426px) {
     max-width: 387px;
   }
@@ -211,7 +215,7 @@ const StyledLabel = styled.div`
 `;
 
 const StyledContent = styled.div`
-  width: 718px;
+  width: 588px;
 
   height: 400px;
   border: 2px solid #ffffff80;

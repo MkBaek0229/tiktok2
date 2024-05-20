@@ -37,6 +37,10 @@ const MainContainer = styled.div`
 const QuestionBox = styled.div`
   width: 761px;
 
+  @media (max-width: 768px) {
+    width: 600px;
+  }
+
   @media (max-width: 426px) {
     max-width: 387px;
   }
@@ -56,10 +60,13 @@ const StyledLabel = styled.div`
   .row-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 761px;
+    width: 100%;
     height: 28px;
-
     margin-top: 48px;
+
+    @media (max-width: 768px) {
+      margin-top: 44px;
+    }
 
     @media (max-width: 425px) {
       margin-top: 44px;
@@ -69,39 +76,33 @@ const StyledLabel = styled.div`
   .text-wrapper2 {
     width: 120px;
     height: 28px;
-
     display: flex;
     align-items: center;
     position: relative;
-    align-items: flex-start;
     color: #ffffff;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 700;
     margin-top: 10px;
+    font-size: 23px;
 
     @media (max-width: 768px) {
-      font-size: 30px;
-      margin-left: -0px;
+      font-size: 20px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 19px;
     }
 
     .star-icon {
       width: 10px;
       height: 10px;
-      margin-bottom: 5px;
       margin-left: 5px;
+      margin-bottom: 5px;
 
       @media (max-width: 768px) {
         width: 9px;
         height: 9px;
       }
-    }
-  }
-
-  .text-wrapper2 {
-    font-size: 23px;
-
-    @media (max-width: 425px) {
-      font-size: 19px;
     }
   }
 `;
@@ -114,16 +115,20 @@ const StyledTextarea = styled.textarea`
   border-radius: 10px;
   background-color: transparent;
   color: white;
-
-  padding-top: 10px;
+  font-size: 24px;
+  padding: 10px;
   outline: none;
   margin-top: 36px;
   resize: none;
 
   &::placeholder {
     color: #ffffff80;
-    font-size: 24px; /* 적절한 크기로 조정 */
+    font-size: 24px;
     padding-left: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
 
     @media (max-width: 425px) {
       font-size: 19px;
@@ -131,9 +136,14 @@ const StyledTextarea = styled.textarea`
     }
   }
 
+  @media (max-width: 768px) {
+    height: 300px;
+    width: 576px;
+  }
+
   @media (max-width: 425px) {
     width: 365px;
-    height: 194px;
+    height: 200px;
   }
 
   @media (max-width: 375px) {

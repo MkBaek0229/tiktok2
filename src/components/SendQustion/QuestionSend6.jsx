@@ -68,6 +68,10 @@ const MainContainer = styled.div`
 const QuestionBox = styled.div`
   width: 761px;
 
+  @media (max-width: 768px) {
+    width: 600px;
+  }
+
   @media (max-width: 426px) {
     max-width: 387px;
   }
@@ -89,8 +93,11 @@ const StyledLabel = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 28px;
-
     margin-top: 48px;
+
+    @media (max-width: 768px) {
+      margin-top: 44px;
+    }
 
     @media (max-width: 425px) {
       margin-top: 44px;
@@ -100,19 +107,21 @@ const StyledLabel = styled.div`
   .text-wrapper2 {
     width: 120px;
     height: 28px;
-
     display: flex;
     align-items: center;
     position: relative;
-    align-items: flex-start;
     color: #ffffff;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 700;
     margin-top: 10px;
+    font-size: 23px;
 
     @media (max-width: 768px) {
-      font-size: 30px;
-      margin-left: -0px;
+      font-size: 20px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 19px;
     }
 
     .star-icon {
@@ -120,18 +129,11 @@ const StyledLabel = styled.div`
       height: 10px;
       margin-left: 5px;
       margin-bottom: 5px;
+
       @media (max-width: 768px) {
         width: 9px;
         height: 9px;
       }
-    }
-  }
-
-  .text-wrapper2 {
-    font-size: 23px;
-
-    @media (max-width: 425px) {
-      font-size: 19px;
     }
   }
 `;
@@ -139,13 +141,16 @@ const StyledLabel = styled.div`
 const FileInputBox = styled.div`
   height: 74px;
   width: 720px;
-
   display: flex;
   justify-content: center;
-
   margin-top: 36px;
   border: 2px solid #ffffff80;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    width: 592px;
+    height: 60px;
+  }
 
   @media (max-width: 425px) {
     width: 369px;
@@ -177,6 +182,10 @@ const CustomFileInputLabel = styled.label`
   cursor: pointer;
   font-weight: bold;
 
+  @media (max-width: 768px) {
+    padding: 8px 16px;
+  }
+
   @media (max-width: 425px) {
     padding: 5px 10px;
   }
@@ -187,8 +196,12 @@ const FileName = styled.span`
   color: #ffffff;
   font-size: 16px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     font-size: 14px;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 12px;
   }
 `;
 
@@ -199,9 +212,14 @@ const StyledLabel2 = styled.div`
   text-align: left;
   margin-left: 15px;
 
+  @media (max-width: 768px) {
+    width: 550px;
+  }
+
   @media (max-width: 425px) {
     width: 250px;
   }
+
   .text-wrapper {
     color: #25f4eead;
     font-family: "Inter-Medium", Helvetica;

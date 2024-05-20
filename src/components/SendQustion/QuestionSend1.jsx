@@ -62,6 +62,10 @@ const MainContainer = styled.div`
 const QuestionBox = styled.div`
   max-width: 761px;
 
+  @media (max-width: 768px) {
+    max-width: 600px;
+  }
+
   @media (max-width: 426px) {
     max-width: 387px;
   }
@@ -85,6 +89,10 @@ const StyledLabel = styled.div`
     width: 282px;
     height: 73px;
 
+    @media (max-width: 768px) {
+      height: 60px;
+    }
+
     @media (max-width: 425px) {
       height: 54px;
     }
@@ -101,6 +109,10 @@ const StyledLabel = styled.div`
     font-weight: 700;
     width: 100%;
     height: 100%;
+
+    @media (max-width: 768px) {
+      font-size: 50px;
+    }
 
     @media (max-width: 425px) {
       font-size: 45px;
@@ -119,6 +131,10 @@ const StyledLabel = styled.div`
 
     margin-top: 69px;
 
+    @media (max-width: 768px) {
+      margin-top: 60px;
+    }
+
     @media (max-width: 425px) {
       margin-top: 72px;
     }
@@ -132,6 +148,10 @@ const StyledLabel = styled.div`
     color: #ffffff;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 700;
+
+    @media (max-width: 768px) {
+      align-items: center;
+    }
 
     @media (max-width: 425px) {
       align-items: center;
@@ -150,8 +170,8 @@ const StyledLabel = styled.div`
       padding-bottom: 10px;
 
       @media (max-width: 768px) {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
       }
     }
   }
@@ -162,6 +182,10 @@ const StyledLabel = styled.div`
 
     font-size: 23px;
 
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+
     @media (max-width: 425px) {
       font-size: 19px;
     }
@@ -171,6 +195,11 @@ const StyledLabel = styled.div`
     width: 79px;
     height: 23px;
     font-size: 16px;
+
+    @media (max-width: 768px) {
+      width: 70px;
+      font-size: 14px;
+    }
 
     @media (max-width: 425px) {
       display: none;
@@ -190,6 +219,9 @@ const StyledLine = styled.div`
   .vector {
     width: 100%;
     height: 2px;
+  }
+  @media (max-width: 768px) {
+    width: 600px;
   }
 
   @media (max-width: 425px) {
@@ -215,12 +247,22 @@ const StyledInput = styled.input`
   &::placeholder {
     color: #ffffff80;
     font-size: 20px; /* 적절한 크기로 조정 */
-    padding-left: 11px;
+    padding-left: 5px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      padding-left: 4px;
+    }
 
     @media (max-width: 425px) {
       font-size: 15px;
-      padding-left: 5px;
+      padding-left: 3px;
     }
+  }
+
+  @media (max-width: 768px) {
+    width: 598px;
+    height: 60px;
   }
 
   @media (max-width: 425px) {
