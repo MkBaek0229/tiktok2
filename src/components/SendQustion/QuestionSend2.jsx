@@ -233,7 +233,7 @@ const InputContainer = styled.div`
   justify-content: center;
   gap: 15px;
   margin-top: 36px;
-  max-width: 718px;
+  max-width: 726px;
 
   @media (max-width: 768px) {
     max-width: 600px;

@@ -140,7 +140,7 @@ const StyledLabel = styled.div`
 
 const FileInputBox = styled.div`
   height: 74px;
-  width: 720px;
+  width: 724px;
   display: flex;
   justify-content: center;
   margin-top: 36px;
