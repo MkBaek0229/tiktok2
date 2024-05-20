@@ -148,7 +148,7 @@ const FileInputBox = styled.div`
   border-radius: 10px;
 
   @media (max-width: 425px) {
-    width: 365px;
+    width: 369px;
     height: 45px;
   }
 
