@@ -160,7 +160,7 @@ const StyledLabel = styled.div`
   }
 
   .text-wrapper3 {
-    width: 76px;
+    width: 79px;
     height: 23px;
     font-size: 16px;
 

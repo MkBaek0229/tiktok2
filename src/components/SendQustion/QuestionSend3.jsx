@@ -51,7 +51,7 @@ function QuestionSend3({ onEmailChange }) {
         </StyledLabel>
         <InputContainer>
           <InputBox>
-            <input
+            <StyledInput
               className="rectangle"
               type="text"
               placeholder="example"
@@ -61,7 +61,7 @@ function QuestionSend3({ onEmailChange }) {
           <InputDivider>@</InputDivider>
           <InputBox>
             {selectedDomain || customDomain ? (
-              <input
+              <StyledInput
                 className="rectangle"
                 type="text"
                 placeholder="domain.com"
@@ -70,7 +70,7 @@ function QuestionSend3({ onEmailChange }) {
                 disabled={!!selectedDomain}
               />
             ) : (
-              <input
+              <StyledInput
                 className="rectangle"
                 type="text"
                 placeholder="domain.com"
@@ -154,6 +154,7 @@ const StyledLabel = styled.div`
       width: 10px;
       height: 10px;
       margin-left: 5px;
+      margin-bottom: 5px;
       @media (max-width: 768px) {
         width: 9px;
         height: 9px;
@@ -171,12 +172,24 @@ const StyledLabel = styled.div`
   }
 `;
 
+const StyledInput = styled.input`
+  &::placeholder {
+    color: #ffffff80;
+    font-size: 20px; /* 적절한 크기로 조정 */
+    padding-left: 11px;
+
+    @media (max-width: 425px) {
+      font-size: 15px;
+      padding-left: 5px;
+    }
+  }
+`;
+
 const InputBox = styled.div`
   height: 74px;
   width: calc((100% - 20px) / 3);
 
   .rectangle {
-    padding-left: 10px;
     border: 2px solid #ffffff80;
     border-radius: 10px;
     height: 100%;

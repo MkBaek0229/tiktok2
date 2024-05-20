@@ -20,7 +20,7 @@ function QuestionSend2({ phoneNumber, onPhoneChange }) {
         </StyledLabel>
         <InputContainer>
           <InputBox>
-            <input
+            <StyledInput
               className="rectangle"
               id="part1"
               type="text"
@@ -32,7 +32,7 @@ function QuestionSend2({ phoneNumber, onPhoneChange }) {
           </InputBox>
           <InputDivider>-</InputDivider>
           <InputBox>
-            <input
+            <StyledInput
               className="rectangle"
               id="part2"
               type="text"
@@ -44,7 +44,7 @@ function QuestionSend2({ phoneNumber, onPhoneChange }) {
           </InputBox>
           <InputDivider>-</InputDivider>
           <InputBox>
-            <input
+            <StyledInput
               className="rectangle"
               id="part3"
               type="text"
@@ -140,6 +140,23 @@ const StyledLabel = styled.div`
   }
 `;
 
+const StyledInput = styled.input`
+  &::placeholder {
+    color: #ffffff80;
+    font-size: 20px; /* 적절한 크기로 조정 */
+    padding-left: 11px;
+
+    @media (max-width: 425px) {
+      font-size: 15px;
+      padding-left: 5px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    width: 365px;
+    height: 45px;
+  }
+`;
 const InputBox = styled.div`
   height: 74px;
   width: 225px;

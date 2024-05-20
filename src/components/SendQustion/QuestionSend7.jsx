@@ -169,7 +169,7 @@ const StyledLabel = styled.div`
   }
 
   .text-wrapper2 {
-    width: 181px;
+    width: 206px;
     height: 28px;
 
     display: flex;

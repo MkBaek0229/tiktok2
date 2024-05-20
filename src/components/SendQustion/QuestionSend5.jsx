@@ -83,7 +83,9 @@ const StyledLabel = styled.div`
     .star-icon {
       width: 10px;
       height: 10px;
+      margin-bottom: 5px;
       margin-left: 5px;
+
       @media (max-width: 768px) {
         width: 9px;
         height: 9px;
