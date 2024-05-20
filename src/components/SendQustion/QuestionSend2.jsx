@@ -207,6 +207,12 @@ const InputContainer = styled.div`
     height: 39px;
     gap: 25px;
   }
+  @media (max-width: 320px) {
+    width: 289px;
+    height: 24px;
+  
+  }
+
   }
 `;
 
