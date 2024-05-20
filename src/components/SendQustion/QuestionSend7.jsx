@@ -145,7 +145,11 @@ const QuestionBox = styled.div`
   width: 761px;
 
   @media (max-width: 426px) {
-    width: 365px;
+    max-width: 387px;
+  }
+
+  @media (max-width: 375px) {
+    width: 337px;
   }
 `;
 const StyledLabel = styled.div`
@@ -200,9 +204,8 @@ const StyledLabel = styled.div`
   .text-wrapper2 {
     font-size: 23px;
 
-    @media (max-width: 768px) {
-      font-size: 18px;
-      margin-left: -0;
+    @media (max-width: 425px) {
+      font-size: 19px;
     }
   }
 `;
@@ -219,7 +222,7 @@ const StyledContent = styled.div`
   outline: none;
   margin-top: 36px;
   overflow-y: scroll;
-  padding: 10px;
+  padding: 4px;
 
   & p {
     margin: 0;
@@ -245,8 +248,8 @@ const StyledContent = styled.div`
     border-radius: 10px;
   }
 
-  @media (max-width: 768px) {
-    max-width: 95%;
+  @media (max-width: 425px) {
+    max-width: 90%;
     height: 350px;
     padding: 10px;
     margin-right: 40px;

@@ -108,7 +108,11 @@ const QuestionBox = styled.div`
   width: 761px;
 
   @media (max-width: 426px) {
-    width: 365px;
+    max-width: 387px;
+  }
+
+  @media (max-width: 375px) {
+    width: 337px;
   }
 `;
 
@@ -165,9 +169,8 @@ const StyledLabel = styled.div`
   .text-wrapper2 {
     font-size: 23px;
 
-    @media (max-width: 768px) {
-      font-size: 18px;
-      margin-left: -0;
+    @media (max-width: 425px) {
+      font-size: 19px;
     }
   }
 `;
@@ -224,8 +227,12 @@ const InputContainer = styled.div`
   max-width: 726px;
 
   @media (max-width: 425px) {
-    width: 364px;
+    width: 365px;
     height: 45px;
+  }
+  @media (max-width: 375px) {
+    width: 322px;
+    height: 39px;
   }
 `;
 
@@ -236,8 +243,8 @@ const InputDivider = styled.span`
   font-weight: 600;
   width: 25px;
 
-  @media (max-width: 768px) {
-    font-size: 20px;
+  @media (max-width: 425px) {
+    font-size: 15px;
   }
 `;
 

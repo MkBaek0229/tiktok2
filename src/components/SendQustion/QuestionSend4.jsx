@@ -44,7 +44,11 @@ const QuestionBox = styled.div`
   width: 761px;
 
   @media (max-width: 426px) {
-    width: 365px;
+    max-width: 387px;
+  }
+
+  @media (max-width: 375px) {
+    width: 337px;
   }
 `;
 
@@ -101,9 +105,8 @@ const StyledLabel = styled.div`
   .text-wrapper2 {
     font-size: 23px;
 
-    @media (max-width: 768px) {
-      font-size: 18px;
-      margin-left: -0;
+    @media (max-width: 425px) {
+      font-size: 19px;
     }
   }
 `;
@@ -122,12 +125,24 @@ const StyledInput = styled.input`
 
   margin-top: 36px;
 
-  ::placeholder {
+  &::placeholder {
     color: #ffffff80;
+    font-size: 20px; /* 적절한 크기로 조정 */
+    padding-left: 11px;
+
+    @media (max-width: 425px) {
+      font-size: 15px;
+      padding-left: 5px;
+    }
   }
 
   @media (max-width: 425px) {
     width: 365px;
     height: 45px;
+  }
+
+  @media (max-width: 375px) {
+    width: 322px;
+    height: 39px;
   }
 `;

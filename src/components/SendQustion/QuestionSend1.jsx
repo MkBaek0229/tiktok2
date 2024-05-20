@@ -57,17 +57,17 @@ const MainContainer = styled.div`
   align-items: center;
 
   margin-top: 150px;
-
-  @media (max-width: 768px) {
-    height: auto;
-  }
 `;
 
 const QuestionBox = styled.div`
   max-width: 761px;
 
   @media (max-width: 426px) {
-    max-width: 365px;
+    max-width: 387px;
+  }
+
+  @media (max-width: 375px) {
+    width: 337px;
   }
 `;
 
@@ -88,6 +88,10 @@ const StyledLabel = styled.div`
     @media (max-width: 425px) {
       height: 54px;
     }
+
+    @media (max-width: 375px) {
+      width: 337px;
+    }
   }
 
   .text-wrapper {
@@ -100,6 +104,10 @@ const StyledLabel = styled.div`
 
     @media (max-width: 425px) {
       font-size: 45px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 39px;
     }
   }
 
@@ -187,6 +195,10 @@ const StyledLine = styled.div`
   @media (max-width: 425px) {
     width: 375px;
   }
+
+  @media (max-width: 375px) {
+    width: 330px;
+  }
 `;
 
 const StyledInput = styled.input`
@@ -214,5 +226,9 @@ const StyledInput = styled.input`
   @media (max-width: 425px) {
     width: 365px;
     height: 45px;
+  }
+  @media (max-width: 375px) {
+    width: 322px;
+    height: 39px;
   }
 `;
