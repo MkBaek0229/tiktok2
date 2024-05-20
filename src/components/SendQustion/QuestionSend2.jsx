@@ -169,6 +169,11 @@ const InputBox = styled.div`
     height: 45px;
   }
 
+  @media (max-width: 375px) {
+    width: 100px;
+    height: 41px;
+  }
+
   .rectangle {
     border: 2px solid #ffffff80;
     border-radius: 10px;
@@ -206,11 +211,6 @@ const InputContainer = styled.div`
     width: 322px;
     height: 39px;
     gap: 25px;
-  }
-  @media (max-width: 320px) {
-    width: 289px;
-    height: 24px;
-  
   }
 
   }
