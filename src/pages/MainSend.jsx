@@ -70,10 +70,13 @@ function MainSend() {
     if (file) formData.append("file", file);
 
     try {
-      const response = await fetch("https://tiktokbac.fly.dev/api/questions", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://tiktoktestpage.fly.dev/api/questions",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const result = await response.json();
       if (result.resultCode === "S-1") {
