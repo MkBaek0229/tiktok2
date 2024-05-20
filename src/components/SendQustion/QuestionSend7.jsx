@@ -215,7 +215,7 @@ const StyledLabel = styled.div`
 `;
 
 const StyledContent = styled.div`
-  width: 716px;
+  width: 584px;
 
   height: 400px;
   border: 2px solid #ffffff80;

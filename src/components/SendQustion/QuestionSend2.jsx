@@ -231,7 +231,7 @@ const InputContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   margin-top: 36px;
   max-width: 726px;
 
@@ -241,12 +241,12 @@ const InputContainer = styled.div`
 
   @media (max-width: 425px) {
     width: 373px;
-    gap: 10px;
+    gap: 15px;
   }
 
   @media (max-width: 375px) {
-    width: 322px;
-    gap: 8px;
+    width: 330px;
+    gap: 10px;
   }
 `;
 
@@ -261,6 +261,6 @@ const InputDivider = styled.span`
   }
 
   @media (max-width: 425px) {
-    display: none;
+    font-size: 15px;
   }
 `;

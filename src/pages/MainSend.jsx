@@ -45,7 +45,8 @@ function MainSend() {
   };
 
   const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+    //setFile(e.target.files[0]);
+    setFile(e);
   };
 
   const handleAgreementChange = (isChecked) => {
@@ -68,6 +69,8 @@ function MainSend() {
     formData.append("title", title);
     formData.append("content", content);
     if (file) formData.append("file", file);
+
+    console.log(Array.from(formData));
 
     try {
       const response = await fetch(

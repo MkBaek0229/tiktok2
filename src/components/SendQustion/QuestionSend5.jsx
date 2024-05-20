@@ -142,12 +142,12 @@ const StyledTextarea = styled.textarea`
   }
 
   @media (max-width: 425px) {
-    width: 365px;
+    width: 349px;
     height: 200px;
   }
 
   @media (max-width: 375px) {
-    width: 322px;
+    width: 306px;
     height: 171px;
   }
 `;

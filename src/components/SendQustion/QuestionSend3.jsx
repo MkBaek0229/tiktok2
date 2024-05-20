@@ -253,7 +253,7 @@ const InputContainer = styled.div`
   }
 
   @media (max-width: 375px) {
-    width: 322px;
+    width: 330px;
     height: 39px;
   }
 `;
