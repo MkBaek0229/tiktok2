@@ -214,8 +214,6 @@ const InputDivider = styled.span`
   left: 2px;
 
   @media (max-width: 425px) {
-    font-size: 12px;
-    position: relative;
-    left: 2px;
+    display: none;
   }
 `;
