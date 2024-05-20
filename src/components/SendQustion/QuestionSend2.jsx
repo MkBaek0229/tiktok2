@@ -200,10 +200,13 @@ const InputContainer = styled.div`
   @media (max-width: 425px) {
     width: 365px;
     height: 45px;
+    gap: 20px;
   }
   @media (max-width: 375px) {
     width: 322px;
     height: 39px;
+    gap: 25px;
+  }
   }
 `;
 
