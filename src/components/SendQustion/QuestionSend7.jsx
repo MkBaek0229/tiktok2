@@ -215,7 +215,7 @@ const StyledLabel = styled.div`
 `;
 
 const StyledContent = styled.div`
-  width: 584px;
+  width: 761px;
 
   height: 400px;
   border: 2px solid #ffffff80;
@@ -227,6 +227,10 @@ const StyledContent = styled.div`
   margin-top: 36px;
   overflow-y: scroll;
   padding: 4px;
+
+  @media (max-width: 774px) {
+    width: 581px;
+  }
 
   & p {
     margin: 0;

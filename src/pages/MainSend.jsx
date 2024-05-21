@@ -36,8 +36,8 @@ function MainSend() {
     setEmail((prev) => ({ ...prev, [part]: value }));
   };
 
-  const handleTitleChange = (files) => {
-    setTitle(files[0]);
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
   };
 
   const handleContentChange = (e) => {
@@ -45,7 +45,6 @@ function MainSend() {
   };
 
   const handleFileChange = (files) => {
-    //setFile(e.target.files[0]);
     setFile(files[0]);
   };
 
@@ -70,8 +69,6 @@ function MainSend() {
     formData.append("content", content);
     if (file) formData.append("file", file);
 
-    console.log(Array.from(formData));
-
     try {
       const response = await fetch(
         "https://tiktokbackendtestmk.fly.dev/api/questions",
@@ -94,31 +91,26 @@ function MainSend() {
   };
 
   return (
-    <div>
-      <PageContainer>
-        <QuestionSend
-          inquirerName={inquirerName}
-          onInquirerNameChange={handleInquirerNameChange}
-        />
-        <QuestionSend2
-          phoneNumber={phoneNumber}
-          onPhoneChange={handlePhoneNumberChange}
-        />
-        <QuestionSend3 email={email} onEmailChange={handleEmailChange} />
-        <QuestionSend4 title={title} onTitleChange={handleTitleChange} />
-        <QuestionSend5
-          content={content}
-          onContentChange={handleContentChange}
-        />
-        <QuestionSend6 onFileChange={handleFileChange} />
-        <QuestionSend7
-          agreed={agreed}
-          onAgreementChange={handleAgreementChange}
-          onSubmit={submitQuestion}
-        />
-        <LastPage />
-      </PageContainer>
-    </div>
+    <PageContainer>
+      <QuestionSend
+        inquirerName={inquirerName}
+        onInquirerNameChange={handleInquirerNameChange}
+      />
+      <QuestionSend2
+        phoneNumber={phoneNumber}
+        onPhoneChange={handlePhoneNumberChange}
+      />
+      <QuestionSend3 email={email} onEmailChange={handleEmailChange} />
+      <QuestionSend4 title={title} onTitleChange={handleTitleChange} />
+      <QuestionSend5 content={content} onContentChange={handleContentChange} />
+      <QuestionSend6 onFileChange={handleFileChange} />
+      <QuestionSend7
+        agreed={agreed}
+        onAgreementChange={handleAgreementChange}
+        onSubmit={submitQuestion}
+      />
+      <LastPage />
+    </PageContainer>
   );
 }
 
