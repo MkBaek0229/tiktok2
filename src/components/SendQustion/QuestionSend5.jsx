@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import star from "../../../images/Question/star.png";
 
-function QuestionSend5({ content, onContentChange }) {
+function QuestionSend5({ content, onContentChange, error }) {
   return (
     <MainContainer>
       <QuestionBox>
@@ -20,6 +20,7 @@ function QuestionSend5({ content, onContentChange }) {
           value={content}
           onChange={onContentChange}
         />
+        {error && <WarningMessage>내용을 입력해 주세요.</WarningMessage>}
       </QuestionBox>
     </MainContainer>
   );
@@ -149,5 +150,18 @@ const StyledTextarea = styled.textarea`
   @media (max-width: 375px) {
     width: 306px;
     height: 171px;
+  }
+`;
+
+const WarningMessage = styled.div`
+  color: #ff4444;
+  margin-top: 10px;
+  width: 100%;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 14px;
+  max-width: 800px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
   }
 `;

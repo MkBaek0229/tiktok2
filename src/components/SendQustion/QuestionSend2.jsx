@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import star from "../../../images/Question/star.png";
 
-function QuestionSend2({ phoneNumber, onPhoneChange }) {
+function QuestionSend2({ phoneNumber, onPhoneChange, error }) {
   const handleInputChange = (part, e) => {
     onPhoneChange(part, e.target.value);
   };
@@ -55,6 +55,7 @@ function QuestionSend2({ phoneNumber, onPhoneChange }) {
             />
           </InputBox>
         </InputContainer>
+        {error && <WarningMessage>전화번호을 입력해 주세요.</WarningMessage>}
       </QuestionBox>
     </MainContainer>
   );
@@ -262,5 +263,18 @@ const InputDivider = styled.span`
 
   @media (max-width: 425px) {
     font-size: 15px;
+  }
+`;
+
+const WarningMessage = styled.div`
+  color: #ff4444;
+  margin-top: 10px;
+  width: 100%;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 14px;
+  max-width: 800px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
   }
 `;

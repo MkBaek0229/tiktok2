@@ -12,7 +12,7 @@ const slideIn = keyframes`
   }
 `;
 
-function QuestionSend({ inquirerName, onInquirerNameChange }) {
+function QuestionSend({ inquirerName, onInquirerNameChange, error }) {
   return (
     <MainContainer>
       <QuestionBox>
@@ -44,6 +44,7 @@ function QuestionSend({ inquirerName, onInquirerNameChange }) {
           value={inquirerName}
           onChange={onInquirerNameChange}
         />
+        {error && <WarningMessage>이름을 입력해 주세요.</WarningMessage>}
       </QuestionBox>
     </MainContainer>
   );
@@ -272,5 +273,18 @@ const StyledInput = styled.input`
   @media (max-width: 375px) {
     width: 322px;
     height: 39px;
+  }
+`;
+
+const WarningMessage = styled.div`
+  color: #ff4444;
+  margin-top: 10px;
+  width: 100%;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 14px;
+  max-width: 800px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
   }
 `;

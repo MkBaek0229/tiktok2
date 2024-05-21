@@ -12,7 +12,7 @@ const emailDomains = [
   "hotmail.com",
 ];
 
-function QuestionSend3({ onEmailChange }) {
+function QuestionSend3({ onEmailChange, error }) {
   const [selectedDomain, setSelectedDomain] = useState("");
   const [customDomain, setCustomDomain] = useState("");
   const handleLocalChange = (e) => {
@@ -78,6 +78,7 @@ function QuestionSend3({ onEmailChange }) {
               />
             )}
           </InputBox>
+
           <DomainSelector
             className="rectangle"
             value={selectedDomain || "직접 입력"}
@@ -90,6 +91,7 @@ function QuestionSend3({ onEmailChange }) {
             ))}
           </DomainSelector>
         </InputContainer>
+        {error && <WarningMessage>메일을 입력해 주세요.</WarningMessage>}
       </QuestionBox>
     </MainContainer>
   );
@@ -299,5 +301,18 @@ const DomainSelector = styled.select`
     height: 51px;
     margin-left: 8px;
     margin-top: -10px;
+  }
+`;
+
+const WarningMessage = styled.div`
+  color: #ff4444;
+  margin-top: 10px;
+  width: 100%;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 14px;
+  max-width: 800px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
   }
 `;
