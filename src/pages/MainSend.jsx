@@ -36,17 +36,17 @@ function MainSend() {
     setEmail((prev) => ({ ...prev, [part]: value }));
   };
 
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value);
+  const handleTitleChange = (files) => {
+    setTitle(files[0]);
   };
 
   const handleContentChange = (e) => {
     setContent(e.target.value);
   };
 
-  const handleFileChange = (e) => {
+  const handleFileChange = (files) => {
     //setFile(e.target.files[0]);
-    setFile(e);
+    setFile(files[0]);
   };
 
   const handleAgreementChange = (isChecked) => {
@@ -74,7 +74,7 @@ function MainSend() {
 
     try {
       const response = await fetch(
-        "https://tiktokbackendtest.fly.dev/api/questions",
+        "https://tiktokbackendtestmk.fly.dev/api/questions",
         {
           method: "POST",
           body: formData,

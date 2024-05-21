@@ -4,10 +4,9 @@ import star from "../../../images/Question/star.png";
 
 function QuestionSend6({ onFileChange }) {
   const [fileName, setFileName] = useState("선택된 파일 없음");
-  const [files, setFiles] = useState([]);
 
   const handleFileChange = (event) => {
-    setFiles(Array.from(event.target.files));
+    const selectedFiles = Array.from(event.target.files);
 
     const file = event.target.files[0];
     if (file) {
@@ -16,7 +15,7 @@ function QuestionSend6({ onFileChange }) {
       setFileName("선택된 파일 없음");
     }
     if (onFileChange) {
-      onFileChange(files);
+      onFileChange(selectedFiles);
     }
   };
 
